@@ -1,0 +1,30 @@
+@import "../utils/box-shadow.scss";
+
+.explorer {
+    text-align: center;
+    
+    & h2{ 
+        font-size: 2rem; 
+        margin-top: 2rem;
+    }
+    
+    & p{ 
+        font-size: 1rem;
+    }
+    
+    & button{ 
+        margin-top: 1rem;
+        transition: transform 200ms; 
+        border-radius: 2rem;
+        border: none;
+        padding: 1rem 2rem; 
+        font-size: 1.5rem; 
+        color: white;
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+    }
+    
+    & button:hover{
+        opacity: 0.9;
+        transform: scale(1.02);
+    }
+}
