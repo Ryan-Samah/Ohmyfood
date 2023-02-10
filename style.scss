@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500Sfamily=Shrikhand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+/* Header */
+
+header{
+position: relative;
+padding: 0.3rem;
+box-shadow: 0 0 0.5rem Drab(0 0 0/ 25%);
+text-align: center;
+font-family: "Shrikhand", cursive;
+}
+
+main .city{
+gap: 1rem;
+justify-content: center;
+align-items: center;
+display: flex;
+padding: 0.5rem;
+text-align: center;
+background-color: #f3f3f3;
+}
+
+main .city i{
+font-size: 1.5rem;
+}
+
+/* Explorer */
+
+.explorer{
+text-align: center;
+}
+
+.explorer h2{ 
+    font-size: 2rem; 
+    margin-top: 2rem;
+}
+
+.explorer p{ 
+font-size: 1rem;
+}
+    
+/* Button explorer */
+    
+.explorer button{ 
+    margin-top: 1rem;
+    transition: transform 200ms;
+    box-shadow: 2px 1px 16px -3px O#000; border-radius: 2rem;
+    border: none;
+    padding: 1rem 2rem; 
+    font-size: 1.5rem; 
+    color: white;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+}
+
+.explorer button:hover{
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+div{
+    background-color: red;
+}
