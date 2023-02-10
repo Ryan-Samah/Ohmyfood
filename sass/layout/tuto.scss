@@ -1,23 +1,49 @@
-@import "../utils/zoom.scss";
-@import "../utils/box-shadow.scss";
+@import"../utils/zoom.scss";
+@import"../utils/box-shadow.scss";
+@import"../utils/variables.scss";
+@import "../utils/colors.scss";
+
+
+
 
 .tuto{
+    counter-reset: steps;
     & ol{
         gap: 2rem;
-        flex-wrap: wrap;
         display: flex;
-        @media (max-width: 800px){
+        @media (max-width: 1000px){
         flex-direction: column;
     }
 }
     & li{
+        position: relative;
+        &::before{
+            left: -$tuto-bullet-height;
+            bottom: $tuto-bullet-height;
+            position: absolute;
+            place-items: center;
+            display: grid;
+            height: 2 * $tuto-bullet-height;
+            width: 2 * $tuto-bullet-height;
+            border-radius: 50%;
+            background-color: $purple;
+            color: white;
+            counter-increment: steps;
+            content: counter(steps);
+        }
+        list-style-type: none;
         border-radius: 1rem;
         flex-grow: 1;
-        padding: 1rem 2rem;
+        padding: 1.5rem 2rem;
         background-color: #f6f6f6;
         @include base-shadow;
         &:hover{
             @include zoom;
+        }
+        & i.fas {
+            font-size: 1.5rem;
+            color: $lightgrey;
+            margin-right: 1rem;
         }
     }
 }

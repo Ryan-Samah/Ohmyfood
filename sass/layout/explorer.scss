@@ -21,6 +21,7 @@
         font-size: 1.5rem; 
         color: white;
         background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+        @include base-shadow;
     }
     
     & button:hover{

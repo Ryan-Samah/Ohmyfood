@@ -46,25 +46,46 @@ header {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: white;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9)); }
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+    box-shadow: 2px 1px 16px -3px #000; }
   .explorer button:hover {
     opacity: 0.9;
     transform: scale(1.02); }
 
-.tuto ol {
-  gap: 2rem;
-  flex-wrap: wrap;
-  display: flex; }
-  @media (max-width: 800px) {
-    .tuto ol {
-      flex-direction: column; } }
-.tuto li {
-  border-radius: 1rem;
-  flex-grow: 1;
-  padding: 1rem 2rem;
-  background-color: #f6f6f6;
-  box-shadow: 2px 1px 8px -3px #000; }
-  .tuto li:hover {
-    transform: scale(1.02); }
+.tuto {
+  counter-reset: steps; }
+  .tuto ol {
+    gap: 2rem;
+    display: flex; }
+    @media (max-width: 1000px) {
+      .tuto ol {
+        flex-direction: column; } }
+  .tuto li {
+    position: relative;
+    list-style-type: none;
+    border-radius: 1rem;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+    background-color: #f6f6f6;
+    box-shadow: 2px 1px 16px -3px #000; }
+    .tuto li::before {
+      left: -1rem;
+      bottom: 1rem;
+      position: absolute;
+      place-items: center;
+      display: grid;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: #9356dc;
+      color: white;
+      counter-increment: steps;
+      content: counter(steps); }
+    .tuto li:hover {
+      transform: scale(1.02); }
+    .tuto li i.fas {
+      font-size: 1.5rem;
+      color: #7E7E7E;
+      margin-right: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
