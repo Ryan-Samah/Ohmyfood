@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "sass": "^1.58.0"
+  },
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet OC Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Samah",
+  "license": "ISC"
+}
