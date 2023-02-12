@@ -26,7 +26,7 @@ p {
   padding: 0; }
 
 a {
-  color: inherit;
+  color: black;
   text-decoration: none; }
 
 header {
@@ -66,7 +66,7 @@ header {
     font-size: 1.5rem;
     color: white;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
-    box-shadow: 2px 1px 16px -3px #7E7E7E; }
+    box-shadow: 2px 1px 8px -3px #7E7E7E; }
     .explorer button:hover {
       opacity: 0.9;
       transform: scale(1.02); }
@@ -93,14 +93,6 @@ header {
     animation: spin 2s linear infinite;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9)); }
 
-@keyframes disappear {
-  0% {
-    transform: scale(1); }
-  100% {
-    transform: scale(0); } }
-@keyframes spin {
-  to {
-    transform: rotate(360deg); } }
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
@@ -120,7 +112,7 @@ header {
     flex-grow: 1;
     padding: 1.5rem 2rem;
     background-color: #f6f6f6;
-    box-shadow: 2px 1px 16px -3px #7E7E7E; }
+    box-shadow: 2px 1px 8px -3px #7E7E7E; }
     .tuto li::before {
       transform: translateY(-50%);
       left: -1rem;
@@ -136,7 +128,7 @@ header {
       counter-increment: steps;
       content: counter(steps); }
     .tuto li:hover {
-      transform: scale(1.02);
+      transform: none scale(1.02);
       background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
       opacity: 0.9; }
     .tuto li i.fas {
@@ -183,6 +175,7 @@ header {
     #homepage .menus .card__image-4 {
       background-image: url(../../assets/menu-4.jpg); }
     #homepage .menus .card__description {
+      padding: 0.5rem;
       border-radius: 0 0 1rem 1rem;
       background-color: white;
       position: relative; }
@@ -230,7 +223,7 @@ header {
         transform: translateY(-50%) scale(1.2); }
       #homepage .menus .card__description h3,
       #homepage .menus .card__description p {
-        padding: 0.3rem; }
+        padding: 5rem; }
 
 footer {
   color: white;
@@ -250,6 +243,14 @@ footer {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+@keyframes disappear {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
 body {
   background-color: #f6f6f6; }
 
@@ -353,24 +354,22 @@ body {
       height: 0.25rem;
       content: ""; }
   #page-resto .menus .menus__category {
+    border: 1px solid red;
     overflow: hidden; }
     #page-resto .menus .menus__category .menu-item {
       margin: 0.5rem;
       overflow: hidden;
       display: flex;
       border-radius: 1rem;
-      box-shadow: 2px 1px 16px -3px #7E7E7E;
+      box-shadow: 2px 1px 8px -3px #7E7E7E;
       animation: appear 1s;
       animation-fill-mode: both; }
       #page-resto .menus .menus__category .menu-item:nth-child(1) {
-        animation-delay: 100ms;
-        color: red; }
+        animation-delay: 100; }
       #page-resto .menus .menus__category .menu-item:nth-child(2) {
-        animation-delay: 200ms;
-        color: red; }
+        animation-delay: 200; }
       #page-resto .menus .menus__category .menu-item:nth-child(3) {
-        animation-delay: 300ms;
-        color: red; }
+        animation-delay: 300; }
       #page-resto .menus .menus__category .menu-item .menu-item__price {
         padding: 1rem;
         align-items: flex-end;
@@ -427,7 +426,7 @@ body {
     font-size: 1.5rem;
     color: white;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
-    box-shadow: 2px 1px 16px -3px #7E7E7E; }
+    box-shadow: 2px 1px 8px -3px #7E7E7E; }
     #page-resto section.order button:hover {
       opacity: 0.9;
       transform: scale(1.02); }

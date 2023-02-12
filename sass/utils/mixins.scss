@@ -3,14 +3,15 @@
 @mixin gradient($opacity: 0.9){
     background-image: linear-gradient(to top, 
     rgba(147, 86, 220, $opacity), 
-    rgba(225, 121, 218, $opacity));
+    rgba(225, 121, 218, $opacity)
+    );
 }
 
 @mixin box-shadow {
-    box-shadow: 2px 1px 16px -3px $lightgrey;
+    box-shadow: 2px 1px 8px -3px $lightgrey;
 }
 
-@mixin zoom($zoom-level:1.02, $transformation: null ) {
+@mixin zoom($zoom-level:1.02, $transformation: none ) {
     transform:  $transformation scale($zoom-level);
 }
 
@@ -29,22 +30,20 @@
 }
 
 @mixin heart-animated {
-    
     border-radius: 0 0 1rem 1rem;
-            background-color: white;
-            position: relative;
-            &::before{
-                @include heart;
-            }
-            &::after{
-                @include heart($opacity:0, $font-weight:900, $color:transparent);
-                @include gradient(1);
-            }
-            &:hover::after{
-                opacity: 1;
-                transform: translateY(-50%) scale(1.2);
-            }        
-        
+    background-color: white;
+    position: relative;
+    &::before{
+        @include heart;
+    }
+    &::after{
+        @include heart($opacity:0, $font-weight:900, $color:transparent);
+        @include gradient(1);
+    }
+    &:hover::after{
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
+    }
 }
 
 
