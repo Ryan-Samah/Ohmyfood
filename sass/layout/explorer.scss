@@ -1,11 +1,12 @@
-@import "../utils/box-shadow.scss";
+@import "../utils/mixins.scss";
+@import "../utils/colors.scss";
 
 .explorer {
     text-align: center;
     
     & h2{ 
-        font-size: 2rem; 
-        margin-top: 2rem;
+        font-size: 1.5rem; 
+        margin: 1rem;
     }
     
     & p{ 
@@ -13,19 +14,49 @@
     }
     
     & button{ 
-        margin-top: 1rem;
-        transition: transform 200ms; 
-        border-radius: 2rem;
-        border: none;
-        padding: 1rem 2rem; 
-        font-size: 1.5rem; 
-        color: white;
-        background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
-        @include base-shadow;
+        @include base-button;
+        
     }
     
-    & button:hover{
-        opacity: 0.9;
-        transform: scale(1.02);
+    
+}
+
+.loader{
+    $animation-duration: 2s;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 200ms $animation-duration forwards;
+    animation-delay: $animation-duration;
+    transform-origin: bottom;
+    &::after{
+        content: "";
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid $color-tertiary;
+        border-radius: 50% ;
+        width: 120px;
+        height: 120px;
+        animation: spin $animation-duration linear infinite;
+        @include gradient;
+    }
+}
+
+@keyframes disappear{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
     }
 }

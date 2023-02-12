@@ -1,5 +1,4 @@
-@import"../utils/zoom.scss";
-@import"../utils/box-shadow.scss";
+@import"../utils/mixins.scss";
 @import"../utils/variables.scss";
 @import "../utils/colors.scss";
 
@@ -8,18 +7,23 @@
 
 .tuto{
     counter-reset: steps;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     & ol{
         gap: 2rem;
         display: flex;
-        @media (max-width: 1000px){
+        @media (max-width: $breakpoint){
         flex-direction: column;
     }
 }
     & li{
         position: relative;
+        display: flex;
+        align-items: center;
         &::before{
+            transform: translateY(-50%);
             left: -$tuto-bullet-height;
-            bottom: $tuto-bullet-height;
+            bottom: 10%;
             position: absolute;
             place-items: center;
             display: grid;
@@ -36,9 +40,11 @@
         flex-grow: 1;
         padding: 1.5rem 2rem;
         background-color: #f6f6f6;
-        @include base-shadow;
+        @include box-shadow;
         &:hover{
             @include zoom;
+            @include gradient;
+            opacity: 0.9;
         }
         & i.fas {
             font-size: 1.5rem;

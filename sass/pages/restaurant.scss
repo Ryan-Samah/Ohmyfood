@@ -1,0 +1,149 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+@import "../utils/colors.scss";
+@import "../utils/animations.scss";
+
+body{
+    background-color: $lightergrey;
+}
+
+
+#page-resto{
+    header{
+        &::before{
+            font-size: 20px;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 1rem;
+            content: "\f060";transition: transform 200ms;
+            @include font-awesome($font-weight:900);
+        }
+        &:hover::before{
+            @include zoom ($zoom-level: 1.2, $transformation:translateY(-50%));
+            
+        }
+    }
+    
+    .banner img{
+        display: block;
+        object-position: center;
+        object-fit: cover;
+        height: 70vh;
+        width: 100%;
+    }
+    .resto__title{
+        margin-top: -2rem;
+        h2 {
+            padding: 2rem 1rem;
+            font-family: "Shrikhand", "cursive";
+            @include heart-animated;
+            border-radius: 2rem 2rem 0 0;
+            background-color: $lightergrey;
+        }
+    }
+    .resto-main{
+        padding: 0 1rem;
+    }
+    .menus{
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        align-content: center;
+        align-items: flex-end;
+        @media (max-width: $breakpoint){
+            grid-template-columns: 1fr;
+        }
+        h3{
+            margin-bottom: 1rem;
+            position: relative;
+            font-weight: 400;
+            text-transform: uppercase;
+            &::after{
+                left: 0rem;
+                top: 1.5rem;
+                position: absolute;
+                background-color: $color-tertiary;
+                width: 3rem;
+                height: 0.25rem;
+                content: "";
+            }
+        }
+        .menus__category{
+            overflow: hidden;
+            .menu-item{
+                $numberOfItems: 3;
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                        color: red;
+                    }
+                }
+                margin: 0.5rem;
+                overflow: hidden;
+                display: flex;
+                border-radius: 1rem;
+                @include box-shadow;
+                animation: appear 1s;
+                animation-fill-mode: both;
+                .menu-item__price{
+                    padding: 1rem;
+                    align-items: flex-end;
+                    display: flex;
+                    font-weight: 900;
+                    margin-left: auto;
+                }
+                .menu-item__description{
+                    overflow: hidden;
+                    padding: 1rem;
+                    h4,
+                    p{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+                .menu-item__check{
+                    $button-width: 4rem;
+                    flex-shrink: 0;
+                    place-items: center;
+                    display: grid;
+                    transition: margin-right 0.5s;
+                    border-radius: 0 1rem 1rem 0;
+                    width: $button-width;
+                    margin-right: -1 * $button-width;
+                    background-color: $color-tertiary;
+                    i {
+                        $size: 1rem;
+                        color: $color-tertiary;
+                        border-radius: 1rem;
+                        width: $size;
+                        height: $size;
+                        background-color: white;
+                        place-items: center;
+                        display: grid;
+                    }
+                }
+                &:hover {
+                    .menu-item__check {
+                        cursor: pointer;
+                        margin-right: 0;
+                    }
+                    i {
+                        @include quarter-spin;
+                        animation: quarter-spin 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    section.order{
+        place-items: center;
+        display: grid;
+        height: 20vh;
+        button{
+            @include base-button;
+        }
+    }
+}
+
+
