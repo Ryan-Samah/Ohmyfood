@@ -48,6 +48,21 @@ header {
   .city i {
     font-size: 1.5rem; }
 
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes disappear {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
 .explorer {
   text-align: center; }
   .explorer h2 {
@@ -160,6 +175,7 @@ header {
       position: absolute;
       content: "Nouveau!"; }
   #homepage .menus .card {
+    border: 1px solid blue;
     flex-grow: 1; }
     #homepage .menus .card__image {
       border-radius: 1rem 1rem 0 0;
@@ -174,12 +190,11 @@ header {
       background-image: url(../../assets/menu-3.jpg); }
     #homepage .menus .card__image-4 {
       background-image: url(../../assets/menu-4.jpg); }
-    #homepage .menus .card__description {
-      padding: 0.5rem;
+    #homepage .menus .card .card__description {
       border-radius: 0 0 1rem 1rem;
       background-color: white;
       position: relative; }
-      #homepage .menus .card__description::before {
+      #homepage .menus .card .card__description::before {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -198,7 +213,7 @@ header {
         -webkit-background-clip: text;
         opacity: 1;
         transition: all 200ms ease-in-out; }
-      #homepage .menus .card__description::after {
+      #homepage .menus .card .card__description::after {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -218,12 +233,12 @@ header {
         opacity: 0;
         transition: all 200ms ease-in-out;
         background-image: linear-gradient(to top, #9356dc, #e179da); }
-      #homepage .menus .card__description:hover::after {
+      #homepage .menus .card .card__description:hover::after {
         opacity: 1;
         transform: translateY(-50%) scale(1.2); }
-      #homepage .menus .card__description h3,
-      #homepage .menus .card__description p {
-        padding: 5rem; }
+      #homepage .menus .card .card__description h3,
+      #homepage .menus .card .card__description p {
+        padding: 1rem; }
 
 footer {
   color: white;
@@ -234,7 +249,9 @@ footer {
     font-weight: 500;
     font-family: "Shrikhand", "sans-serif"; }
   footer p {
-    padding: 0.2rem; }
+    padding: 0.2rem;
+    border: 1px solid red;
+    border-top: 3px solid blue; }
 
 @keyframes appear {
   0% {
@@ -430,5 +447,21 @@ body {
     #page-resto section.order button:hover {
       opacity: 0.9;
       transform: scale(1.02); }
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes disappear {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */
