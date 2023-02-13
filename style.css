@@ -42,7 +42,7 @@ header {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding: 0.5rem;
+  padding: 1rem;
   text-align: center;
   background-color: #EAEAEA; }
   .city i {
@@ -62,15 +62,15 @@ header {
     transform: scale(0); } }
 @keyframes spin {
   to {
-    transform: rotate(360deg); } }
-.explorer {
+    transform: rotate(210deg); } }
+.reserver {
   text-align: center; }
-  .explorer h2 {
+  .reserver h2 {
     font-size: 1.5rem;
     margin: 1rem; }
-  .explorer p {
+  .reserver p {
     font-size: 1rem; }
-  .explorer button {
+  .reserver button {
     cursor: pointer;
     font-weight: 300;
     margin-top: 1rem;
@@ -82,7 +82,7 @@ header {
     color: white;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
     box-shadow: 2px 1px 8px -3px #7E7E7E; }
-    .explorer button:hover {
+    .reserver button:hover {
       opacity: 0.9;
       transform: scale(1.02); }
 
@@ -108,17 +108,17 @@ header {
     animation: spin 2s linear infinite;
     background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9)); }
 
-.tuto {
+.fonctionemment {
   counter-reset: steps;
   margin-bottom: 2rem;
   margin-top: 2rem; }
-  .tuto ol {
+  .fonctionemment ol {
     gap: 2rem;
     display: flex; }
     @media (max-width: 1000px) {
-      .tuto ol {
+      .fonctionemment ol {
         flex-direction: column; } }
-  .tuto li {
+  .fonctionemment li {
     position: relative;
     display: flex;
     align-items: center;
@@ -128,10 +128,10 @@ header {
     padding: 1.5rem 2rem;
     background-color: #f6f6f6;
     box-shadow: 2px 1px 8px -3px #7E7E7E; }
-    .tuto li::before {
+    .fonctionemment li::before {
       transform: translateY(-50%);
       left: -1rem;
-      bottom: 10%;
+      bottom: 5%;
       position: absolute;
       place-items: center;
       display: grid;
@@ -142,28 +142,28 @@ header {
       color: white;
       counter-increment: steps;
       content: counter(steps); }
-    .tuto li:hover {
+    .fonctionemment li:hover {
       transform: none scale(1.02);
       background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
       opacity: 0.9; }
-    .tuto li i.fas {
+    .fonctionemment li i.fas {
       font-size: 1.5rem;
       color: #7E7E7E;
       margin-right: 1rem; }
 
-#homepage .menus {
+#pagedaccueil .menus {
   margin-bottom: 2rem;
   background-color: #f6f6f6; }
-  #homepage .menus .menus__cards {
+  #pagedaccueil .menus .menus__cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     display: grid; }
     @media (max-width: 1000px) {
-      #homepage .menus .menus__cards {
+      #pagedaccueil .menus .menus__cards {
         grid-template-columns: repeat(1, 1fr); } }
-    #homepage .menus .menus__cards .new {
+    #pagedaccueil .menus .menus__cards .new {
       position: relative; }
-    #homepage .menus .menus__cards .new::before {
+    #pagedaccueil .menus .menus__cards .new::before {
       top: 1rem;
       right: 1rem;
       place-items: center;
@@ -174,27 +174,27 @@ header {
       height: 2rem;
       position: absolute;
       content: "Nouveau!"; }
-  #homepage .menus .card {
+  #pagedaccueil .menus .card {
     flex-grow: 1; }
-    #homepage .menus .card__image {
+    #pagedaccueil .menus .card__image {
       border-radius: 1rem 1rem 0 0;
       background-size: cover;
       height: 15rem;
       background-position: center; }
-    #homepage .menus .card__image-1 {
+    #pagedaccueil .menus .card__image-1 {
       background-image: url(../../assets/menu-1.jpg); }
-    #homepage .menus .card__image-2 {
+    #pagedaccueil .menus .card__image-2 {
       background-image: url(../../assets/menu-2.jpg); }
-    #homepage .menus .card__image-3 {
+    #pagedaccueil .menus .card__image-3 {
       background-image: url(../../assets/menu-3.jpg); }
-    #homepage .menus .card__image-4 {
+    #pagedaccueil .menus .card__image-4 {
       background-image: url(../../assets/menu-4.jpg); }
-    #homepage .menus .card .card__description {
+    #pagedaccueil .menus .card .card__description {
       border-radius: 0 0 1rem 1rem;
       background-color: white;
       position: relative;
       padding: 0.3rem; }
-      #homepage .menus .card .card__description::before {
+      #pagedaccueil .menus .card .card__description::before {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -213,7 +213,7 @@ header {
         -webkit-background-clip: text;
         opacity: 1;
         transition: all 200ms ease-in-out; }
-      #homepage .menus .card .card__description::after {
+      #pagedaccueil .menus .card .card__description::after {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -233,11 +233,11 @@ header {
         opacity: 0;
         transition: all 200ms ease-in-out;
         background-image: linear-gradient(to top, #9356dc, #e179da); }
-      #homepage .menus .card .card__description:hover::after {
+      #pagedaccueil .menus .card .card__description:hover::after {
         opacity: 1;
         transform: translateY(-50%) scale(1.2); }
-      #homepage .menus .card .card__description h3,
-      #homepage .menus .card .card__description p {
+      #pagedaccueil .menus .card .card__description h3,
+      #pagedaccueil .menus .card .card__description p {
         padding: 0.5rem; }
 
 footer {
@@ -265,7 +265,7 @@ footer {
     transform: scale(0); } }
 @keyframes spin {
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(210deg); } }
 body {
   background-color: #f6f6f6; }
 
@@ -422,7 +422,7 @@ body {
         animation: quarter-spin 0.5s ease-in-out; }
 @keyframes quarter-spin {
   0% {
-    transform: rotate(-270deg); }
+    transform: rotate(-210deg); }
   100% {
     transform: rotate(0); } }
 #page-resto section.order {

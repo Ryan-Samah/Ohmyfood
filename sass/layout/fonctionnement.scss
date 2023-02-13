@@ -5,7 +5,7 @@
 
 
 
-.tuto{
+.fonctionemment{
     counter-reset: steps;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -23,7 +23,7 @@
         &::before{
             transform: translateY(-50%);
             left: -$tuto-bullet-height;
-            bottom: 10%;
+            bottom: 5%;
             position: absolute;
             place-items: center;
             display: grid;
