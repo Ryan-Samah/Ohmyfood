@@ -168,7 +168,7 @@ header {
       right: 1rem;
       place-items: center;
       display: grid;
-      color: black;
+      color: #1b6150;
       background-color: #99E2d0;
       width: 5rem;
       height: 2rem;
@@ -249,9 +249,7 @@ footer {
     font-weight: 500;
     font-family: "Shrikhand", "sans-serif"; }
   footer p {
-    padding: 0.2rem;
-    border: 1px solid red;
-    border-top: 3px solid blue; }
+    padding: 0.2rem; }
 
 @keyframes appear {
   0% {
@@ -371,7 +369,6 @@ body {
       height: 0.25rem;
       content: ""; }
   #page-resto .menus .menus__category {
-    border: 1px solid red;
     overflow: hidden; }
     #page-resto .menus .menus__category .menu-item {
       margin: 0.5rem;

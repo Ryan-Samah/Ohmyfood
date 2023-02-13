@@ -22,7 +22,7 @@
                 right: 1rem;
                 place-items: center;
                 display: grid;
-                color: darken(red, 50%);
+                color: darken($color-tertiary, 50%);
                 background-color: $color-tertiary;
                 width: 5rem;
                 height: 2rem;
