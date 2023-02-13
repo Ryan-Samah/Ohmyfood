@@ -44,7 +44,7 @@ header {
   display: flex;
   padding: 0.5rem;
   text-align: center;
-  background-color: #f3f3f3; }
+  background-color: #EAEAEA; }
   .city i {
     font-size: 1.5rem; }
 
@@ -249,8 +249,7 @@ footer {
     font-weight: 500;
     font-family: "Shrikhand", "sans-serif"; }
   footer p {
-    padding: 0.2rem;
-    border: 1px solid blue; }
+    padding: 0.2rem; }
 
 @keyframes appear {
   0% {
@@ -370,19 +369,28 @@ body {
       height: 0.25rem;
       content: ""; }
   #page-resto .menus .menus__category {
-    overflow: hidden;
-    color: black; }
+    overflow: hidden; }
     #page-resto .menus .menus__category .menu-item {
+      margin: 0.5rem;
+      overflow: hidden;
+      display: flex;
+      border-radius: 1rem;
+      animation: appear 1s;
+      animation-fill-mode: both;
       box-shadow: 2px 1px 8px -3px #7E7E7E; }
+      #page-resto .menus .menus__category .menu-item:nth-child(1) {
+        animation-delay: 200ms; }
+      #page-resto .menus .menus__category .menu-item:nth-child(2) {
+        animation-delay: 400ms; }
+      #page-resto .menus .menus__category .menu-item:nth-child(3) {
+        animation-delay: 600ms; }
       #page-resto .menus .menus__category .menu-item .menu-item__price {
         padding: 1rem;
         align-items: flex-end;
         display: flex;
         font-weight: 900;
-        margin-left: auto;
-        color: black; }
+        margin-left: auto; }
       #page-resto .menus .menus__category .menu-item .menu-item__description {
-        color: black;
         overflow: hidden;
         padding: 1rem; }
         #page-resto .menus .menus__category .menu-item .menu-item__description h4,
@@ -402,8 +410,8 @@ body {
         #page-resto .menus .menus__category .menu-item .menu-item__check i {
           color: #99E2d0;
           border-radius: 1rem;
-          width: 5rem;
-          height: 5rem;
+          width: 2rem;
+          height: 2rem;
           background-color: white;
           place-items: center;
           display: grid; }

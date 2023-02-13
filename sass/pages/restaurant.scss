@@ -68,29 +68,23 @@ body{
         }
         .menus__category{
             overflow: hidden;
-            color: black;
 
             .menu-item{
                 
-                // color: black;
-                // $numberOfitems: 3;
+                $numberOfitems: 3;
 
-                // @for $i from 1 through 3 {
-                //     &:nth-child(#{$i}) {
-                //         animation-delay:  s * $i;
-                        
-
-
-                //     }
-                // }
-                // margin: 0.5rem;
-                // overflow: hidden;
-                // display: flex;
-                // border-radius: 1rem;
-                // color: black;
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        animation-delay:  200ms * $i;
+                    }
+                 }
+                 margin: 0.5rem;
+                 overflow: hidden;
+                 display: flex;
+                 border-radius: 1rem;
                 
-                // animation: appear 1s;
-                // animation-fill-mode: both;
+                animation: appear 1s;
+                animation-fill-mode: both;
                 @include box-shadow;
                 .menu-item__price{
                     padding: 1rem;
@@ -98,11 +92,9 @@ body{
                     display: flex;
                     font-weight: 900;
                     margin-left: auto;
-                    color: black;
 
                 }
                 .menu-item__description{
-                    color: black;
                     
                     overflow: hidden;
                     padding: 1rem;
@@ -125,7 +117,7 @@ body{
                     margin-right: -1 * $button-width;
                     background-color: $color-tertiary;
                     i {
-                        $size: 5rem;
+                        $size: 2rem;
                         color: $color-tertiary;
                         border-radius: 1rem;
                         width: $size;
