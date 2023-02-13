@@ -17,11 +17,12 @@
                 position: relative;
             }
             .new::before{
+
                 top: 1rem;
                 right: 1rem;
                 place-items: center;
                 display: grid;
-                color: darken($color-tertiary, 50%);
+                color: darken(red, 50%);
                 background-color: $color-tertiary;
                 width: 5rem;
                 height: 2rem;
