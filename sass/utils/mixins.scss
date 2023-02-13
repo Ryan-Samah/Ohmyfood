@@ -15,7 +15,7 @@
     transform:  $transformation scale($zoom-level);
 }
 
-@mixin heart($opacity: 1, $font-weight: 400, $color: black) {
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
     @include font-awesome($font-weight);
     content: "\f004";
     font-size: 2rem;
@@ -37,7 +37,7 @@
         @include heart;
     }
     &::after{
-        @include heart($opacity:0, $font-weight:900, $color:transparent);
+        @include heart($opacity:0, $font-weight:900, $color: transparent);
         @include gradient(1);
     }
     &:hover::after{

@@ -7,14 +7,12 @@
   "description": "Projet OC Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss:style.css",
-    "build": "postcss style.css -u autoprefixer cssnano -o ./build/style.min.css"
+    "sass": "sass --watch style.scss:style.css"
   },
   "author": "Ryan Samah",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.14",
     "eslint": "^8.34.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",

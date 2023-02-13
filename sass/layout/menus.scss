@@ -31,7 +31,6 @@
             }
         }
         .card{
-            border: 1px solid blue;
             flex-grow: 1;
             &__image{
                 border-radius: 1rem 1rem 0 0 ;
@@ -46,9 +45,10 @@
             }
             .card__description{
                 @include heart-animated;
+                padding: 0.3rem;
                 h3,
                 p{
-                    padding: 1rem;
+                    padding: 0.5rem;
                 }
             }
         }

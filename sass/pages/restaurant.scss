@@ -68,28 +68,42 @@ body{
         }
         .menus__category{
             overflow: hidden;
+            color: black;
+
             .menu-item{
-                $numberOfItems: 3;
-                @for $i from 1 through 3 {
-                    &:nth-child(#{$i}) {
-                        animation-delay:  100 * $i;
-                    }
-                }
-                margin: 0.5rem;
-                overflow: hidden;
-                display: flex;
-                border-radius: 1rem;
+                
+                // color: black;
+                // $numberOfitems: 3;
+
+                // @for $i from 1 through 3 {
+                //     &:nth-child(#{$i}) {
+                //         animation-delay:  s * $i;
+                        
+
+
+                //     }
+                // }
+                // margin: 0.5rem;
+                // overflow: hidden;
+                // display: flex;
+                // border-radius: 1rem;
+                // color: black;
+                
+                // animation: appear 1s;
+                // animation-fill-mode: both;
                 @include box-shadow;
-                animation: appear 1s;
-                animation-fill-mode: both;
                 .menu-item__price{
                     padding: 1rem;
                     align-items: flex-end;
                     display: flex;
                     font-weight: 900;
                     margin-left: auto;
+                    color: black;
+
                 }
                 .menu-item__description{
+                    color: black;
+                    
                     overflow: hidden;
                     padding: 1rem;
                     h4,
@@ -97,6 +111,7 @@ body{
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
+
                     }
                 }
                 .menu-item__check{
@@ -110,7 +125,7 @@ body{
                     margin-right: -1 * $button-width;
                     background-color: $color-tertiary;
                     i {
-                        $size: 1rem;
+                        $size: 5rem;
                         color: $color-tertiary;
                         border-radius: 1rem;
                         width: $size;
