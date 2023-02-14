@@ -34,7 +34,7 @@ body{
         h2 {
             padding: 2rem 1rem;
             font-family: "Shrikhand", "cursive";
-            @include heart-animated;
+            @include coeur-animation;
             border-radius: 2rem 2rem 0 0;
             background-color: $lightergrey;
         }
@@ -66,7 +66,7 @@ body{
                 content: "";
             }
         }
-        .menus__category{
+        .menus__family{
             overflow: hidden;
 
             .menu-item{
@@ -85,7 +85,7 @@ body{
                 
                 animation: appear 1s;
                 animation-fill-mode: both;
-                @include box-shadow;
+                @include background-shadow;
                 .menu-item__price{
                     padding: 1rem;
                     align-items: flex-end;
@@ -94,7 +94,7 @@ body{
                     margin-left: auto;
 
                 }
-                .menu-item__description{
+                .menu-item__inside{
                     
                     overflow: hidden;
                     padding: 1rem;
@@ -140,7 +140,7 @@ body{
             }
         }
     }
-    section.order{
+    .order{
         place-items: center;
         display: grid;
         height: 20vh;

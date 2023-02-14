@@ -37,16 +37,16 @@ header {
   text-align: center;
   font-family: "Shrikhand", cursive; }
 
-.city {
-  gap: 1rem;
+.ville {
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   background-color: #EAEAEA; }
-  .city i {
-    font-size: 1.5rem; }
+  .ville i {
+    font-size: 2.5rem; }
 
 @keyframes appear {
   0% {
@@ -80,7 +80,7 @@ header {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: white;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     box-shadow: 2px 1px 8px -3px #7E7E7E; }
     .reserver button:hover {
       opacity: 0.9;
@@ -106,7 +106,7 @@ header {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9)); }
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9)); }
 
 .fonctionemment {
   counter-reset: steps;
@@ -138,13 +138,13 @@ header {
       height: 2rem;
       width: 2rem;
       border-radius: 50%;
-      background-color: #9356dc;
+      background-color: #9356DC;
       color: white;
       counter-increment: steps;
       content: counter(steps); }
     .fonctionemment li:hover {
       transform: none scale(1.02);
-      background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+      background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
       opacity: 0.9; }
     .fonctionemment li i.fas {
       font-size: 1.5rem;
@@ -154,16 +154,16 @@ header {
 #pagedaccueil .menus {
   margin-bottom: 2rem;
   background-color: #f6f6f6; }
-  #pagedaccueil .menus .menus__cards {
+  #pagedaccueil .menus .menus__cartes {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     display: grid; }
     @media (max-width: 1000px) {
-      #pagedaccueil .menus .menus__cards {
+      #pagedaccueil .menus .menus__cartes {
         grid-template-columns: repeat(1, 1fr); } }
-    #pagedaccueil .menus .menus__cards .new {
+    #pagedaccueil .menus .menus__cartes .new {
       position: relative; }
-    #pagedaccueil .menus .menus__cards .new::before {
+    #pagedaccueil .menus .menus__cartes .new::before {
       top: 1rem;
       right: 1rem;
       place-items: center;
@@ -174,27 +174,27 @@ header {
       height: 2rem;
       position: absolute;
       content: "Nouveau!"; }
-  #pagedaccueil .menus .card {
+  #pagedaccueil .menus .carte {
     flex-grow: 1; }
-    #pagedaccueil .menus .card__image {
+    #pagedaccueil .menus .carte__image {
       border-radius: 1rem 1rem 0 0;
       background-size: cover;
       height: 15rem;
       background-position: center; }
-    #pagedaccueil .menus .card__image-1 {
+    #pagedaccueil .menus .carte__image-1 {
       background-image: url(../../assets/menu-1.jpg); }
-    #pagedaccueil .menus .card__image-2 {
+    #pagedaccueil .menus .carte__image-2 {
       background-image: url(../../assets/menu-2.jpg); }
-    #pagedaccueil .menus .card__image-3 {
+    #pagedaccueil .menus .carte__image-3 {
       background-image: url(../../assets/menu-3.jpg); }
-    #pagedaccueil .menus .card__image-4 {
+    #pagedaccueil .menus .carte__image-4 {
       background-image: url(../../assets/menu-4.jpg); }
-    #pagedaccueil .menus .card .card__description {
+    #pagedaccueil .menus .carte .carte__inside {
       border-radius: 0 0 1rem 1rem;
       background-color: white;
       position: relative;
       padding: 0.3rem; }
-      #pagedaccueil .menus .card .card__description::before {
+      #pagedaccueil .menus .carte .carte__inside::before {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -213,7 +213,7 @@ header {
         -webkit-background-clip: text;
         opacity: 1;
         transition: all 200ms ease-in-out; }
-      #pagedaccueil .menus .card .card__description::after {
+      #pagedaccueil .menus .carte .carte__inside::after {
         position: absolute;
         display: inline-block;
         font-style: normal;
@@ -232,12 +232,12 @@ header {
         -webkit-background-clip: text;
         opacity: 0;
         transition: all 200ms ease-in-out;
-        background-image: linear-gradient(to top, #9356dc, #e179da); }
-      #pagedaccueil .menus .card .card__description:hover::after {
+        background-image: linear-gradient(to top, #9356dc, #ff79da); }
+      #pagedaccueil .menus .carte .carte__inside:hover::after {
         opacity: 1;
         transform: translateY(-50%) scale(1.2); }
-      #pagedaccueil .menus .card .card__description h3,
-      #pagedaccueil .menus .card .card__description p {
+      #pagedaccueil .menus .carte .carte__inside h3,
+      #pagedaccueil .menus .carte .carte__inside p {
         padding: 0.5rem; }
 
 footer {
@@ -340,7 +340,7 @@ body {
       -webkit-background-clip: text;
       opacity: 0;
       transition: all 200ms ease-in-out;
-      background-image: linear-gradient(to top, #9356dc, #e179da); }
+      background-image: linear-gradient(to top, #9356dc, #ff79da); }
     #page-resto .resto__title h2:hover::after {
       opacity: 1;
       transform: translateY(-50%) scale(1.2); }
@@ -368,9 +368,9 @@ body {
       width: 3rem;
       height: 0.25rem;
       content: ""; }
-  #page-resto .menus .menus__category {
+  #page-resto .menus .menus__family {
     overflow: hidden; }
-    #page-resto .menus .menus__category .menu-item {
+    #page-resto .menus .menus__family .menu-item {
       margin: 0.5rem;
       overflow: hidden;
       display: flex;
@@ -378,27 +378,27 @@ body {
       animation: appear 1s;
       animation-fill-mode: both;
       box-shadow: 2px 1px 8px -3px #7E7E7E; }
-      #page-resto .menus .menus__category .menu-item:nth-child(1) {
+      #page-resto .menus .menus__family .menu-item:nth-child(1) {
         animation-delay: 200ms; }
-      #page-resto .menus .menus__category .menu-item:nth-child(2) {
+      #page-resto .menus .menus__family .menu-item:nth-child(2) {
         animation-delay: 400ms; }
-      #page-resto .menus .menus__category .menu-item:nth-child(3) {
+      #page-resto .menus .menus__family .menu-item:nth-child(3) {
         animation-delay: 600ms; }
-      #page-resto .menus .menus__category .menu-item .menu-item__price {
+      #page-resto .menus .menus__family .menu-item .menu-item__price {
         padding: 1rem;
         align-items: flex-end;
         display: flex;
         font-weight: 900;
         margin-left: auto; }
-      #page-resto .menus .menus__category .menu-item .menu-item__description {
+      #page-resto .menus .menus__family .menu-item .menu-item__inside {
         overflow: hidden;
         padding: 1rem; }
-        #page-resto .menus .menus__category .menu-item .menu-item__description h4,
-        #page-resto .menus .menus__category .menu-item .menu-item__description p {
+        #page-resto .menus .menus__family .menu-item .menu-item__inside h4,
+        #page-resto .menus .menus__family .menu-item .menu-item__inside p {
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden; }
-      #page-resto .menus .menus__category .menu-item .menu-item__check {
+      #page-resto .menus .menus__family .menu-item .menu-item__check {
         flex-shrink: 0;
         place-items: center;
         display: grid;
@@ -407,7 +407,7 @@ body {
         width: 4rem;
         margin-right: -4rem;
         background-color: #99E2d0; }
-        #page-resto .menus .menus__category .menu-item .menu-item__check i {
+        #page-resto .menus .menus__family .menu-item .menu-item__check i {
           color: #99E2d0;
           border-radius: 1rem;
           width: 2rem;
@@ -415,21 +415,21 @@ body {
           background-color: white;
           place-items: center;
           display: grid; }
-      #page-resto .menus .menus__category .menu-item:hover .menu-item__check {
+      #page-resto .menus .menus__family .menu-item:hover .menu-item__check {
         cursor: pointer;
         margin-right: 0; }
-      #page-resto .menus .menus__category .menu-item:hover i {
+      #page-resto .menus .menus__family .menu-item:hover i {
         animation: quarter-spin 0.5s ease-in-out; }
 @keyframes quarter-spin {
   0% {
     transform: rotate(-210deg); }
   100% {
     transform: rotate(0); } }
-#page-resto section.order {
+#page-resto .order {
   place-items: center;
   display: grid;
   height: 20vh; }
-  #page-resto section.order button {
+  #page-resto .order button {
     cursor: pointer;
     font-weight: 300;
     margin-top: 1rem;
@@ -439,9 +439,9 @@ body {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: white;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(225, 121, 218, 0.9));
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     box-shadow: 2px 1px 8px -3px #7E7E7E; }
-    #page-resto section.order button:hover {
+    #page-resto .order button:hover {
       opacity: 0.9;
       transform: scale(1.02); }
 

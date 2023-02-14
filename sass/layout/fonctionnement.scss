@@ -2,9 +2,6 @@
 @import"../utils/variables.scss";
 @import "../utils/colors.scss";
 
-
-
-
 .fonctionemment{
     counter-reset: steps;
     margin-bottom: 2rem;
@@ -13,24 +10,24 @@
         gap: 2rem;
         display: flex;
         @media (max-width: $breakpoint){
-        flex-direction: column;
+            flex-direction: column;
+        }
     }
-}
     & li{
         position: relative;
         display: flex;
         align-items: center;
         &::before{
             transform: translateY(-50%);
-            left: -$tuto-bullet-height;
+            left: -$font-height;
             bottom: 5%;
             position: absolute;
             place-items: center;
             display: grid;
-            height: 2 * $tuto-bullet-height;
-            width: 2 * $tuto-bullet-height;
+            height: 2 * $font-height;
+            width: 2 * $font-height;
             border-radius: 50%;
-            background-color: $purple;
+            background-color: $color-primary;
             color: white;
             counter-increment: steps;
             content: counter(steps);
@@ -40,7 +37,7 @@
         flex-grow: 1;
         padding: 1.5rem 2rem;
         background-color: #f6f6f6;
-        @include box-shadow;
+        @include background-shadow;
         &:hover{
             @include zoom;
             @include gradient;

@@ -2,20 +2,20 @@
 
 @mixin gradient($opacity: 0.9){
     background-image: linear-gradient(to top, 
-    rgba(147, 86, 220, $opacity), 
-    rgba(225, 121, 218, $opacity)
+    rgba($color-primary, $opacity), 
+    rgba($color-secondary, $opacity)
     );
 }
 
-@mixin box-shadow {
+@mixin background-shadow {
     box-shadow: 2px 1px 8px -3px $lightgrey;
 }
 
-@mixin zoom($zoom-level:1.02, $transformation: none ) {
+@mixin zoom($zoom-level: 1.02, $transformation: none ) {
     transform:  $transformation scale($zoom-level);
 }
 
-@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+@mixin coeur($opacity: 1, $font-weight: 400, $color: inherit) {
     @include font-awesome($font-weight);
     content: "\f004";
     font-size: 2rem;
@@ -29,15 +29,15 @@
     transition: all 200ms ease-in-out;
 }
 
-@mixin heart-animated {
+@mixin coeur-animation {
     border-radius: 0 0 1rem 1rem;
     background-color: white;
     position: relative;
     &::before{
-        @include heart;
+        @include coeur;
     }
     &::after{
-        @include heart($opacity:0, $font-weight:900, $color: transparent);
+        @include coeur($opacity:0, $font-weight:900, $color: transparent);
         @include gradient(1);
     }
     &:hover::after{
@@ -58,7 +58,7 @@
     font-size: 1.5rem;         
     color: white;
     @include gradient;
-    @include box-shadow;
+    @include background-shadow;
     &:hover{
         opacity: 0.9;
         transform: scale(1.02);

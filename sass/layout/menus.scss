@@ -6,7 +6,7 @@
     .menus{
         margin-bottom: 2rem;
         background-color: #f6f6f6;
-        .menus__cards{
+        .menus__cartes{
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             display: grid;
@@ -17,7 +17,6 @@
                 position: relative;
             }
             .new::before{
-
                 top: 1rem;
                 right: 1rem;
                 place-items: center;
@@ -30,7 +29,7 @@
                 content: "Nouveau!";
             }
         }
-        .card{
+        .carte{
             flex-grow: 1;
             &__image{
                 border-radius: 1rem 1rem 0 0 ;
@@ -43,8 +42,8 @@
                     background-image: url(../../assets/menu-#{$i}.jpg)
                 }
             }
-            .card__description{
-                @include heart-animated;
+            .carte__inside{
+                @include coeur-animation;
                 padding: 0.3rem;
                 h3,
                 p{
