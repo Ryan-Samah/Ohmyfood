@@ -22,14 +22,14 @@ body{
             @include zoom ($zoom-level: 1.2, $transformation:translateY(-50%));
         }
     }
-    .banner img{
+    .banniere img{
         display: block;
         object-position: center;
         object-fit: cover;
         height: 70vh;
         width: 100%;
     }
-    .resto__title{
+    .resto__titre{
         margin-top: -2rem;
         h2 {
             padding: 2rem 1rem;

@@ -286,15 +286,15 @@ body {
   font-weight: 900; }
 #page-resto header:hover::before {
   transform: translateY(-50%) scale(1.2); }
-#page-resto .banner img {
+#page-resto .banniere img {
   display: block;
   object-position: center;
   object-fit: cover;
   height: 70vh;
   width: 100%; }
-#page-resto .resto__title {
+#page-resto .resto__titre {
   margin-top: -2rem; }
-  #page-resto .resto__title h2 {
+  #page-resto .resto__titre h2 {
     padding: 2rem 1rem;
     font-family: "Shrikhand", "cursive";
     border-radius: 0 0 1rem 1rem;
@@ -302,7 +302,7 @@ body {
     position: relative;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6; }
-    #page-resto .resto__title h2::before {
+    #page-resto .resto__titre h2::before {
       position: absolute;
       display: inline-block;
       font-style: normal;
@@ -321,7 +321,7 @@ body {
       -webkit-background-clip: text;
       opacity: 1;
       transition: all 200ms ease-in-out; }
-    #page-resto .resto__title h2::after {
+    #page-resto .resto__titre h2::after {
       position: absolute;
       display: inline-block;
       font-style: normal;
@@ -341,7 +341,7 @@ body {
       opacity: 0;
       transition: all 200ms ease-in-out;
       background-image: linear-gradient(to top, #9356dc, #ff79da); }
-    #page-resto .resto__title h2:hover::after {
+    #page-resto .resto__titre h2:hover::after {
       opacity: 1;
       transform: translateY(-50%) scale(1.2); }
 #page-resto .resto-main {
