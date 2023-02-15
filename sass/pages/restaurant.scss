@@ -16,7 +16,7 @@ body{
             top: 50%;
             left: 1rem;
             content: "\f060";transition: transform 200ms;
-            @include font-awesome($font-weight:900);
+            @include icone($font-weight:900);
         }
         &:hover::before{
             @include zoom ($zoom-level: 1.2, $transformation:translateY(-50%));
@@ -47,7 +47,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         align-content: center;
-        align-items: flex-end;
+        align-elements: flex-end;
         @media (max-width: $breakpoint){
             grid-template-columns: 1fr;
         }
@@ -69,9 +69,9 @@ body{
         .menus__family{
             overflow: hidden;
 
-            .menu-item{
+            .menu-element{
                 
-                $numberOfitems: 3;
+                $numberOfelements: 3;
 
                 @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
@@ -86,15 +86,15 @@ body{
                 animation: appear 1s;
                 animation-fill-mode: both;
                 @include background-shadow;
-                .menu-item__price{
+                .menu-element__prix{
                     padding: 1rem;
-                    align-items: flex-end;
+                    align-elements: flex-end;
                     display: flex;
                     font-weight: 900;
                     margin-left: auto;
 
                 }
-                .menu-item__inside{
+                .menu-element__inside{
                     
                     overflow: hidden;
                     padding: 1rem;
@@ -106,10 +106,10 @@ body{
 
                     }
                 }
-                .menu-item__check{
-                    $button-width: 4rem;
+                .menu-element__check{
+                    $button-width: 27rem;
                     flex-shrink: 0;
-                    place-items: center;
+                    place-elements: center;
                     display: grid;
                     transition: margin-right 0.5s;
                     border-radius: 0 1rem 1rem 0;
@@ -123,12 +123,12 @@ body{
                         width: $size;
                         height: $size;
                         background-color: white;
-                        place-items: center;
+                        place-elements: center;
                         display: grid;
                     }
                 }
                 &:hover {
-                    .menu-item__check {
+                    .menu-element__check {
                         cursor: pointer;
                         margin-right: 0;
                     }
@@ -141,7 +141,7 @@ body{
         }
     }
     .order{
-        place-items: center;
+        place-elements: center;
         display: grid;
         height: 20vh;
         button{

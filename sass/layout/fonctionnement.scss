@@ -16,13 +16,13 @@
     & li{
         position: relative;
         display: flex;
-        align-items: center;
+        align-elements: center;
         &::before{
             transform: translateY(-50%);
             left: -$font-height;
             bottom: 5%;
             position: absolute;
-            place-items: center;
+            place-elements: center;
             display: grid;
             height: 2 * $font-height;
             width: 2 * $font-height;

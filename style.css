@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500Sfamily=Shrikhand&display=swap");
+
 *,
 ::before,
 ::after {
@@ -40,7 +41,7 @@ header {
 .ville {
   gap: 1.5rem;
   justify-content: center;
-  align-items: center;
+  align-elements: center;
   display: flex;
   padding: 1.5rem;
   text-align: center;
@@ -89,7 +90,7 @@ header {
 .loader {
   position: fixed;
   display: grid;
-  place-items: center;
+  place-elements: center;
   background-color: #fff;
   height: 100vh;
   inset: 0;
@@ -121,7 +122,7 @@ header {
   .fonctionemment li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-elements: center;
     list-style-type: none;
     border-radius: 1rem;
     flex-grow: 1;
@@ -130,13 +131,13 @@ header {
     box-shadow: 2px 1px 8px -3px #7E7E7E; }
     .fonctionemment li::before {
       transform: translateY(-50%);
-      left: -1rem;
+      left: -3rem;
       bottom: 5%;
       position: absolute;
-      place-items: center;
+      place-elements: center;
       display: grid;
-      height: 2rem;
-      width: 2rem;
+      height: 6rem;
+      width: 6rem;
       border-radius: 50%;
       background-color: #9356DC;
       color: white;
@@ -166,7 +167,7 @@ header {
     #pagedaccueil .menus .menus__cartes .new::before {
       top: 1rem;
       right: 1rem;
-      place-items: center;
+      place-elements: center;
       display: grid;
       color: #1b6150;
       background-color: #99E2d0;
@@ -351,7 +352,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
   align-content: center;
-  align-items: flex-end; }
+  align-elements: flex-end; }
   @media (max-width: 1000px) {
     #page-resto .menus {
       grid-template-columns: 1fr; } }
@@ -370,7 +371,7 @@ body {
       content: ""; }
   #page-resto .menus .menus__family {
     overflow: hidden; }
-    #page-resto .menus .menus__family .menu-item {
+    #page-resto .menus .menus__family .menu-element {
       margin: 0.5rem;
       overflow: hidden;
       display: flex;
@@ -378,47 +379,47 @@ body {
       animation: appear 1s;
       animation-fill-mode: both;
       box-shadow: 2px 1px 8px -3px #7E7E7E; }
-      #page-resto .menus .menus__family .menu-item:nth-child(1) {
+      #page-resto .menus .menus__family .menu-element:nth-child(1) {
         animation-delay: 200ms; }
-      #page-resto .menus .menus__family .menu-item:nth-child(2) {
+      #page-resto .menus .menus__family .menu-element:nth-child(2) {
         animation-delay: 400ms; }
-      #page-resto .menus .menus__family .menu-item:nth-child(3) {
+      #page-resto .menus .menus__family .menu-element:nth-child(3) {
         animation-delay: 600ms; }
-      #page-resto .menus .menus__family .menu-item .menu-item__price {
+      #page-resto .menus .menus__family .menu-element .menu-element__prix {
         padding: 1rem;
-        align-items: flex-end;
+        align-elements: flex-end;
         display: flex;
         font-weight: 900;
         margin-left: auto; }
-      #page-resto .menus .menus__family .menu-item .menu-item__inside {
+      #page-resto .menus .menus__family .menu-element .menu-element__inside {
         overflow: hidden;
         padding: 1rem; }
-        #page-resto .menus .menus__family .menu-item .menu-item__inside h4,
-        #page-resto .menus .menus__family .menu-item .menu-item__inside p {
+        #page-resto .menus .menus__family .menu-element .menu-element__inside h4,
+        #page-resto .menus .menus__family .menu-element .menu-element__inside p {
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden; }
-      #page-resto .menus .menus__family .menu-item .menu-item__check {
+      #page-resto .menus .menus__family .menu-element .menu-element__check {
         flex-shrink: 0;
-        place-items: center;
+        place-elements: center;
         display: grid;
         transition: margin-right 0.5s;
         border-radius: 0 1rem 1rem 0;
         width: 4rem;
         margin-right: -4rem;
         background-color: #99E2d0; }
-        #page-resto .menus .menus__family .menu-item .menu-item__check i {
+        #page-resto .menus .menus__family .menu-element .menu-element__check i {
           color: #99E2d0;
           border-radius: 1rem;
           width: 2rem;
           height: 2rem;
           background-color: white;
-          place-items: center;
+          place-elements: center;
           display: grid; }
-      #page-resto .menus .menus__family .menu-item:hover .menu-item__check {
+      #page-resto .menus .menus__family .menu-element:hover .menu-element__check {
         cursor: pointer;
         margin-right: 0; }
-      #page-resto .menus .menus__family .menu-item:hover i {
+      #page-resto .menus .menus__family .menu-element:hover i {
         animation: quarter-spin 0.5s ease-in-out; }
 @keyframes quarter-spin {
   0% {
@@ -426,7 +427,7 @@ body {
   100% {
     transform: rotate(0); } }
 #page-resto .order {
-  place-items: center;
+  place-elements: center;
   display: grid;
   height: 20vh; }
   #page-resto .order button {

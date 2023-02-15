@@ -16,7 +16,7 @@
 }
 
 @mixin coeur($opacity: 1, $font-weight: 400, $color: inherit) {
-    @include font-awesome($font-weight);
+    @include icone($font-weight);
     content: "\f004";
     font-size: 2rem;
     right: 1rem;
@@ -65,7 +65,7 @@
     }
 }
 
-@mixin font-awesome($font-weight: 400) {
+@mixin icone($font-weight: 400) {
     position: absolute;
     display: inline-block;
     font-style: normal;            
