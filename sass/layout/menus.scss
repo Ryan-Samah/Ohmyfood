@@ -19,7 +19,7 @@
             .new::before{
                 top: 1rem;
                 right: 1rem;
-                place-elements: center;
+                place-items: center;
                 display: grid;
                 color: darken($color-tertiary, 50%);
                 background-color: $color-tertiary;
@@ -37,11 +37,7 @@
                 height: 15rem;
                 background-position: center;
             }
-            @for $i from 1 to 4 {
-                &__image-#{$i} {
-                    background-image: url(./images/menu-@{$i}.jpg);
-                }
-            }
+            
             .carte__inside{
                 @include coeur-animation;
                 padding: 0.3rem;

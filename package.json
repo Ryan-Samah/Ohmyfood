@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "sass": "^1.58.0"
-  },
   "name": "ohmyfood",
   "version": "1.0.0",
   "inside": "Projet OC Ohmyfood",
@@ -12,10 +9,6 @@
   "author": "Ryan Samah",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.34.0",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "prettier": "^2.8.4"
+    "sass": "^1.58.1"
   }
 }

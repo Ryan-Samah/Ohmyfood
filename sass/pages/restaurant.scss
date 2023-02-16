@@ -47,7 +47,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         align-content: center;
-        align-elements: flex-end;
+        align-items: flex-end;
         @media (max-width: $breakpoint){
             grid-template-columns: 1fr;
         }
@@ -88,7 +88,7 @@ body{
                 @include background-shadow;
                 .menu-element__prix{
                     padding: 1rem;
-                    align-elements: flex-end;
+                    align-items: flex-end;
                     display: flex;
                     font-weight: 900;
                     margin-left: auto;
@@ -107,9 +107,9 @@ body{
                     }
                 }
                 .menu-element__check{
-                    $button-width: 27rem;
+                    $button-width: 4rem;
                     flex-shrink: 0;
-                    place-elements: center;
+                    place-items: center;
                     display: grid;
                     transition: margin-right 0.5s;
                     border-radius: 0 1rem 1rem 0;
@@ -123,7 +123,7 @@ body{
                         width: $size;
                         height: $size;
                         background-color: white;
-                        place-elements: center;
+                        place-items: center;
                         display: grid;
                     }
                 }
@@ -140,10 +140,10 @@ body{
             }
         }
     }
-    .order{
-        place-elements: center;
+    .commande{
+        place-items: center;
         display: grid;
-        height: 20vh;
+        height: 13vh;
         button{
             @include base-button;
         }
