@@ -50,7 +50,7 @@ header {
 
 @keyframes appear {
   0% {
-    transform: translateY(-120%);
+    transform: translateY(-50%);
     opacity: 0; }
   100% {
     transform: translateY(0);
@@ -62,7 +62,7 @@ header {
     transform: scale(0); } }
 @keyframes spin {
   to {
-    transform: rotate(210deg); } }
+    transform: rotate(360deg); } }
 .reserver {
   text-align: center; }
   .reserver h2 {
@@ -241,12 +241,11 @@ footer {
     font-weight: 500;
     font-family: "Shrikhand", "sans-serif"; }
   footer p {
-    padding: 0.2rem;
-    border: 1px solid red; }
+    padding: 0.2rem; }
 
 @keyframes appear {
   0% {
-    transform: translateY(-120%);
+    transform: translateY(-50%);
     opacity: 0; }
   100% {
     transform: translateY(0);
@@ -258,7 +257,7 @@ footer {
     transform: scale(0); } }
 @keyframes spin {
   to {
-    transform: rotate(210deg); } }
+    transform: rotate(360deg); } }
 body {
   background-color: #f6f6f6; }
 
@@ -415,9 +414,11 @@ body {
         animation: quarter-spin 0.5s ease-in-out; }
 @keyframes quarter-spin {
   0% {
-    transform: rotate(-110deg); }
+    transform: rotate(120deg); }
+  50% {
+    transform: rotate(120deg); }
   100% {
-    transform: rotate(123deg); } }
+    transform: rotate(120deg); } }
 #page-resto .commande {
   place-items: center;
   display: grid;

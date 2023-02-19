@@ -1,10 +1,13 @@
 @mixin quarter-spin {
     @keyframes quarter-spin {
     0%{
-        transform: rotate(-110deg);
+        transform: rotate(120deg);
+    }
+    50%{
+        transform: rotate(120deg);
     }
     100%{
-        transform: rotate(123deg);
+        transform: rotate(120deg);
     }
 }
     
@@ -12,7 +15,7 @@
 
 @keyframes appear{
     0%{
-        transform: translateY(-120%);
+        transform: translateY(-50%);
         opacity: 0;
     }
     100%{
@@ -32,7 +35,7 @@
 
 @keyframes spin{
     to{
-        transform: rotate(210deg);
+        transform: rotate(360deg);
     }
 }
 
