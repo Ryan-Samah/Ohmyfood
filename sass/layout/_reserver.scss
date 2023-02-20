@@ -4,25 +4,25 @@
 
 .reserver {
     text-align: center;
-    
-    & h2{ 
-        font-size: 1.5rem; 
+
+    & h2 {
+        font-size: 1.5rem;
         margin: 1rem;
     }
-    
-    & p{ 
+
+    & p {
         font-size: 1rem;
     }
-    
-    & button{ 
+
+    & button {
         @include base-button;
-        
+
     }
-    
-    
+
+
 }
 
-.loader{
+.loader {
     $animation-duration: 2s;
     position: fixed;
     display: grid;
@@ -35,15 +35,15 @@
     animation: disappear 200ms $animation-duration forwards;
     animation-delay: $animation-duration;
     transform-origin: bottom;
-    &::after{
+
+    &::after {
         content: "";
         border: 16px solid #f3f3f3;
         border-top: 16px solid $color-tertiary;
-        border-radius: 50% ;
+        border-radius: 50%;
         width: 120px;
         height: 120px;
         animation: spin $animation-duration linear infinite;
         @include gradient;
     }
 }
-

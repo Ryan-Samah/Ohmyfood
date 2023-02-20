@@ -2,21 +2,26 @@
 @import "../utils/colors.scss";
 @import "../utils/mixins.scss";
 
-#pagedaccueil{
-    .menus{
+#pagedaccueil {
+    .menus {
         margin-bottom: 2rem;
         background-color: #f6f6f6;
-        .menus__cartes{
+
+        .menus__cartes {
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             display: grid;
-            @media (max-width: $breakpoint){
+
+
+            @media (max-width: $breakpoint) {
                 grid-template-columns: repeat(1, 1fr);
             }
-            .new{
+
+            .new {
                 position: relative;
             }
-            .new::before{
+
+            .new::before {
                 top: 1rem;
                 right: 1rem;
                 place-items: center;
@@ -26,24 +31,33 @@
                 width: 5rem;
                 height: 2rem;
                 position: absolute;
-                content: "Nouveau!";
+                content: "Nouveau";
             }
         }
-        .carte{
+
+        .carte {
             flex-grow: 1;
-            &__image{
-                border-radius: 1rem 1rem 0 0 ;
+
+            &__image {
+                border-radius: 1rem 1rem 0 0;
                 background-size: cover;
                 height: 15rem;
                 background-position: center;
             }
-            
-            .carte__inside{
+
+            @for $i from 1 through 4 {
+                &__image-#{$i} {
+                    background-image: url("/images/menu-#{$i}.jpg");
+                }
+            }
+
+            .carte__inside {
                 @include coeur-animation;
                 padding: 0.3rem;
+
                 h3,
-                p{
-                    padding: 0.5rem;
+                p {
+                    padding: 0.3rem;
                 }
             }
         }

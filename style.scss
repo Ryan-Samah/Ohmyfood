@@ -1,10 +1,8 @@
-@import  "./sass/base.scss";
-@import  "./sass/layout/header.scss";
-@import  "./sass/layout/ville.scss";
-@import  "./sass/layout/reserver.scss";
-@import  "./sass/layout/fonctionnement.scss";
-@import  "./sass/layout/menus.scss";
-@import  "./sass/layout/footer.scss";
-@import  "./sass/pages/restaurant.scss";
-
-
+@import "./sass/_general.scss";
+@import "./sass/layout/_header.scss";
+@import "./sass/layout/_ville.scss";
+@import "./sass/layout/_reserver.scss";
+@import "./sass/layout/_fonctionnement.scss";
+@import "./sass/layout/_menus.scss";
+@import "./sass/layout/_footer.scss";
+@import "./sass/pages/_restaurant.scss";

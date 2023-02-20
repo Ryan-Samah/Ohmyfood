@@ -3,34 +3,39 @@
 @import "../utils/colors.scss";
 @import "../utils/animations.scss";
 
-body{
+body {
     background-color: $lightergrey;
 }
 
 
-#page-resto{
-    header{
-        &::before{
+#page-resto {
+    header {
+        &::before {
             font-size: 20px;
             transform: translateY(-50%);
             top: 50%;
             left: 1rem;
-            content: "\f060";transition: transform 200ms;
-            @include icone($font-weight:900);
+            content: "\f060";
+            transition: transform 200ms;
+            @include icone($font-weight: 900);
         }
-        &:hover::before{
-            @include zoom ($zoom-level: 1.2, $transformation:translateY(-50%));
+
+        &:hover::before {
+            @include zoom ($zoom-level: 1.2, $transformation: translateY(-50%));
         }
     }
-    .banniere img{
+
+    .banniere img {
         display: block;
         object-position: center;
         object-fit: cover;
         height: 70vh;
         width: 100%;
     }
-    .resto__titre{
+
+    .resto__titre {
         margin-top: -2rem;
+
         h2 {
             padding: 2rem 1rem;
             font-family: "Shrikhand", "cursive";
@@ -39,24 +44,29 @@ body{
             background-color: $lightergrey;
         }
     }
-    .resto-main{
+
+    .resto-main {
         padding: 0 1rem;
     }
-    .menus{
+
+    .menus {
         gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         align-content: center;
         align-items: flex-end;
-        @media (max-width: $breakpoint){
+
+        @media (max-width: $breakpoint) {
             grid-template-columns: 1fr;
         }
-        h3{
+
+        h3 {
             margin-bottom: 1rem;
             position: relative;
             font-weight: 400;
             text-transform: uppercase;
-            &::after{
+
+            &::after {
                 left: 0rem;
                 top: 1.5rem;
                 position: absolute;
@@ -66,27 +76,30 @@ body{
                 content: "";
             }
         }
-        .menus__family{
+
+        .menus__family {
             overflow: hidden;
 
-            .menu-element{
-                
+            .menu-element {
+
                 $numberOfelements: 3;
 
                 @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
-                        animation-delay:  200ms * $i;
+                        animation-delay: 200ms * $i;
                     }
-                 }
-                 margin: 0.5rem;
-                 overflow: hidden;
-                 display: flex;
-                 border-radius: 1rem;
-                
+                }
+
+                margin: 0.5rem;
+                overflow: hidden;
+                display: flex;
+                border-radius: 1rem;
+
                 animation: appear 1s;
                 animation-fill-mode: both;
                 @include background-shadow;
-                .menu-element__prix{
+
+                .menu-element__prix {
                     padding: 1rem;
                     align-items: flex-end;
                     display: flex;
@@ -94,19 +107,22 @@ body{
                     margin-left: auto;
 
                 }
-                .menu-element__inside{
-                    
+
+                .menu-element__inside {
+
                     overflow: hidden;
                     padding: 1rem;
+
                     h4,
-                    p{
+                    p {
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
 
                     }
                 }
-                .menu-element__check{
+
+                .menu-element__check {
                     $button-width: 4rem;
                     flex-shrink: 0;
                     place-items: center;
@@ -116,6 +132,7 @@ body{
                     width: $button-width;
                     margin-right: -1 * $button-width;
                     background-color: $color-tertiary;
+
                     i {
                         $size: 2rem;
                         color: $color-tertiary;
@@ -127,11 +144,13 @@ body{
                         display: grid;
                     }
                 }
+
                 &:hover {
                     .menu-element__check {
                         cursor: pointer;
                         margin-right: 0;
                     }
+
                     i {
                         @include quarter-spin;
                         animation: quarter-spin 0.5s ease-in-out;
@@ -140,14 +159,14 @@ body{
             }
         }
     }
-    .commande{
+
+    .commande {
         place-items: center;
         display: grid;
         height: 13vh;
-        button{
+
+        button {
             @include base-button;
         }
     }
 }
-
-

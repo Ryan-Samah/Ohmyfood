@@ -2,22 +2,26 @@
 @import"../utils/variables.scss";
 @import "../utils/colors.scss";
 
-.fonctionemment{
+.fonctionemment {
     counter-reset: steps;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    & ol{
+
+    & ol {
         gap: 2rem;
         display: flex;
-        @media (max-width: $breakpoint){
+
+        @media (max-width: $breakpoint) {
             flex-direction: column;
         }
     }
-    & li{
+
+    & li {
         position: relative;
         display: flex;
         align-items: center;
-        &::before{
+
+        &::before {
             transform: translateY(-50%);
             left: -$font-height;
             bottom: 5%;
@@ -32,17 +36,20 @@
             counter-increment: steps;
             content: counter(steps);
         }
+
         list-style-type: none;
         border-radius: 1rem;
         flex-grow: 1;
         padding: 1.5rem 2rem;
         background-color: #f6f6f6;
         @include background-shadow;
-        &:hover{
+
+        &:hover {
             @include zoom;
             @include gradient;
             opacity: 0.9;
         }
+
         & i.fas {
             font-size: 1.5rem;
             color: $lightgrey;
@@ -50,4 +57,3 @@
         }
     }
 }
-
