@@ -10,19 +10,19 @@ body {
 
 #page-resto {
     header {
-        &::before {
-            font-size: 20px;
-            transform: translateY(-50%);
-            top: 50%;
-            left: 1rem;
-            content: "\f060";
-            transition: transform 200ms;
-            @include icone($font-weight: 900);
-        }
+         &::before {
+             font-size: 20px;
+             transform: translateY(-50%);
+             top: 50%;
+             left: 1rem;
+             content: "\f060";
+             transition: transform 200ms;
+              @include icone($font-weight: 900);
+         }
 
-        &:hover::before {
-            @include zoom ($zoom-level: 1.2, $transformation: translateY(-50%));
-        }
+         &:hover::before {
+              @include zoom ($zoom-level: 1.2, $transformation: translateY(-50%));
+         }
     }
 
     .banniere img {
@@ -66,15 +66,15 @@ body {
             font-weight: 400;
             text-transform: uppercase;
 
-            &::after {
-                left: 0rem;
-                top: 1.5rem;
-                position: absolute;
-                background-color: $color-tertiary;
-                width: 3rem;
-                height: 0.25rem;
-                content: "";
-            }
+             &::after {
+                 left: 0rem;
+                 top: 1.5rem;
+                 position: absolute;
+                 background-color: $color-tertiary;
+                 width: 3rem;
+                 height: 0.25rem;
+                 content: "";
+             }
         }
 
         .menus__family {
@@ -146,13 +146,13 @@ body {
                 }
 
                 &:hover {
-                    .menu-element__check {
-                        cursor: pointer;
-                        margin-right: 0;
-                    }
+                     .menu-element__check {
+                         cursor: pointer;
+                         margin-right: 0;
+                     }
 
                     i {
-                        @include quarter-spin;
+                         @include quarter-spin;
                         animation: quarter-spin 0.5s ease-in-out;
                     }
                 }
@@ -166,7 +166,7 @@ body {
         height: 13vh;
 
         button {
-            @include base-button;
+             @include base-button;
         }
     }
 }

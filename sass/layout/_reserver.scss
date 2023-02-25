@@ -15,7 +15,7 @@
     }
 
     & button {
-        @include base-button;
+         @include base-button;
 
     }
 
@@ -36,14 +36,14 @@
     animation-delay: $animation-duration;
     transform-origin: bottom;
 
-    &::after {
-        content: "";
-        border: 16px solid #f3f3f3;
-        border-top: 16px solid $color-tertiary;
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin $animation-duration linear infinite;
-        @include gradient;
-    }
+     &::after {
+         content: "";
+         border: 16px solid #f3f3f3;
+         border-top: 16px solid $color-tertiary;
+         border-radius: 50%;
+         width: 120px;
+         height: 120px;
+         animation: spin $animation-duration linear infinite;
+          @include gradient;
+     }
 }
