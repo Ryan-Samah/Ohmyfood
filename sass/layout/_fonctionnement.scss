@@ -10,6 +10,7 @@
     & ol {
         gap: 2rem;
         display: flex;
+        padding: 1rem;
 
         @media (max-width: $breakpoint) {
             flex-direction: column;
@@ -21,21 +22,21 @@
         display: flex;
         align-items: center;
 
-         &::before {
-             transform: translateY(-50%);
-             left: -$font-height;
-             bottom: 5%;
-             position: absolute;
-             place-items: center;
-             display: grid;
-             height: 2 * $font-height;
-             width: 2 * $font-height;
-             border-radius: 50%;
-             background-color: $color-primary;
-             color: white;
-             counter-increment: steps;
-             content: counter(steps);
-         }
+        &::before {
+            transform: translateY(-50%);
+            left: -$font-height;
+            bottom: 5%;
+            position: absolute;
+            place-items: center;
+            display: grid;
+            height: 2 * $font-height;
+            width: 2 * $font-height;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: white;
+            counter-increment: steps;
+            content: counter(steps);
+        }
 
         list-style-type: none;
         border-radius: 1rem;
@@ -45,9 +46,9 @@
         @include background-shadow;
 
         &:hover {
-             @include zoom;
-             @include gradient;
-            opacity: 0.9;
+            @include zoom;
+            @include gradient;
+            // opacity: 0.9;
         }
 
         & i.fas {

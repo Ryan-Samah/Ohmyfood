@@ -7,6 +7,10 @@
         margin-bottom: 2rem;
         background-color: #f6f6f6;
 
+        & h2 {
+            padding: 1rem 0;
+        }
+
         .menus__cartes {
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
